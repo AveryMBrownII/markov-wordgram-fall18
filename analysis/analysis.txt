@@ -49,8 +49,9 @@ the same or different in the two methods? Account for
 arrays created in the methods and arrays created by
 WordGram objects. Try to be quantitative in answering.
 
-The amount of memory allocated for the method 1 is probably two times
-greater than the memory allocated for method 2 because memory for both
-the arraylist entries and array entries are needed for method 1 while 
-method 2 only uses an array.
+Method 1 creates more wordgram objects than Method 2 since the wordgram call is within 
+a for loop Also, Method 2 creates an array size of w.size while method 1 creates an array size of 
+all the words in the file so the amount of memory allocated for array 1 is much greater (probably by a factor
+of myWords.length / w.size)
+
 
