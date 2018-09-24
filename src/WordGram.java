@@ -76,8 +76,7 @@ public class WordGram {
 	public int hashCode(){
 		// TODO: complete this method
 		if (myHash == 0) {
-			String temp = toString();
-			myHash = temp.hashCode();
+			myHash = toString().hashCode();
 		}
 		return myHash;
 	}
@@ -91,25 +90,17 @@ public class WordGram {
 	public WordGram shiftAdd(String last) {
 		WordGram wg = new WordGram(myWords,0,myWords.length);
 		// TODO: Complete this method
-		//String[] temp = this.myWords;
-		for (int x = 0; x < myWords.length; x++) {
-			//temp[x] = temp[x+1];
-			myWords[x] = myWords[x+1];
+		for (int x = 0; x < wg.myWords.length-1; x++) {
+			wg.myWords[x] = wg.myWords[x+1];	
 		}	
-		//temp[0] = last;
-		myWords[0] = last;
-		//wg = new WordGram(temp,0,temp.length);	
-
-		wg = new WordGram(myWords,0,myWords.length);
-
-		
+		wg.myWords[wg.myWords.length-1] = last;		
 		return wg;
 	}
 
 	@Override
 	public String toString(){
 		// TODO: Complete this method
-		if (myToString.equals(null)){
+		if (myToString == (null)){
 			myToString = String.join(" ", myWords);
 		}
 		return myToString;
