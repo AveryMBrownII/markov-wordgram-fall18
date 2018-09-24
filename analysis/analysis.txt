@@ -1,4 +1,4 @@
-YOUR NAME and YOUR NETID
+Avery Brown (amb222)
 
 Run WordGramDiver for wordgrams of size 2-10 and record
 the number of WordGram values/objects that occur more than
@@ -15,12 +15,13 @@ values of WSIZE
 WSIZE    # duplicates
 2        60,453
 3        10,756
-4
-5
-7
-8
-9
-10
+4		  1,987
+5		 	667
+6			340
+7			226
+8			151
+9			105
+10			 73
 
 =====
 Explain in your own words the conceptual differences between 
@@ -30,10 +31,26 @@ Answer these questions:
 (1) Why the results of these methods should be the same in 
 terms of changes made to the HashSet parameter.
 
+The results should be the same because both methods accurately form
+wordgrams that are subsequently added to the hashset parameter.
+
 (2) What are the conceptual differences between the two
 benchmarking methods
+
+The first benchmarking method adds all the words to an ArrayList and then
+converts the ArrayList into an Array so that the wordgrams can be formed 
+and added to the hashset parameter.
+The second benchmarking method adds all the words into an Array, and
+then adds the wordgram to the hashset parameter through a while loop.
+
 
 (3) Is the total amount of memory allocated for arrays
 the same or different in the two methods? Account for
 arrays created in the methods and arrays created by
 WordGram objects. Try to be quantitative in answering.
+
+The amount of memory allocated for the method 1 is probably two times
+greater than the memory allocated for method 2 because memory for both
+the arraylist entries and array entries are needed for method 1 while 
+method 2 only uses an array.
+

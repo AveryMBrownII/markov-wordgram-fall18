@@ -2,7 +2,7 @@
 /**
  * WordGram objects represent a k-gram of strings/words.
  * 
- * @author Avery Brown
+ * @author Avery Brown (amb222)
  *
  */
 
@@ -13,7 +13,8 @@ public class WordGram {
 	private int myHash;         // cached hash value
 
 	/**
-	 * Create WordGram (add comments)
+	 * Create WordGram by initializing the instance variables
+	 * Also add the words from the source to the arraylist myWords
 	 * @param source
 	 * @param start
 	 * @param size
@@ -44,8 +45,7 @@ public class WordGram {
 	}
 
 	/**
-	 * Complete this comment
-	 * @return
+	 * @return the length of myWords
 	 */
 	public int length(){
 		// TODO: change this
@@ -83,9 +83,11 @@ public class WordGram {
 	
 
 	/**
-	 * Create and complete this comment
+	 * Take the current wordgram object and find a way to 
+	 * shift the word to fit the specified order
+	 * using the parameter last
 	 * @param last is last String of returned WordGram
-	 * @return
+	 * @return the updated wordgram
 	 */
 	public WordGram shiftAdd(String last) {
 		WordGram wg = new WordGram(myWords,0,myWords.length);
